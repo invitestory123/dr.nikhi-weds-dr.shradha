@@ -11,45 +11,56 @@ window.WEDDING_DATA = {
     hashtag: "#NikhilWedsShraddha",
   },
 
+  opening: {
+    invocation: "॥ श्री गणेशाय नमः ॥",
+    message: "With the blessings of Lord Ganesha, we invite you to celebrate the wedding of our son Dr. Nikhil with Dr. Shraddha",
+    dateLabel: "Wednesday, 9 December 2026",
+    timeLabel: "8:00 PM onwards",
+    venueLabel: "Moments Resort, Hardag, Ranchi",
+    closingNote: "It would mean so much to have you with us.",
+  },
+
   mainEvent: {
     title: "Dr. Nikhil & Dr. Shraddha — Wedding Ceremony",
     startsAt: "2026-12-09T20:00:00+05:30",
     durationMinutes: 300,
     dateLabel: "Wednesday, 9 December 2026",
     timeLabel: "8:00 PM onwards",
-    celebrationLabel: "Wedding Festivities",
+    subtitle: "A day to remember",
+    celebrationLabel: "The celebrations",
   },
 
   families: {
     groomSide: {
       parents: "Mrs. Savita Shrivastava & Mr. Akhil Prasad Shrivastava",
-      line: "cordially invite you to celebrate the wedding of their son",
+      line: "request the pleasure of your company at the wedding of their son",
     },
     brideSide: {
       parents: "Mrs. Rita Shrivastava & Mr. Sunil Kumar Shrivastava",
-      line: "together with the family of their daughter",
+      line: "daughter of",
     },
   },
 
-  invitationNote: "With the divine blessings of Lord Ganesha and our elders, we solicit your gracious presence and blessings on the auspicious wedding celebration of our beloved children.",
+  invitationNote: "As they begin this new chapter, we would be honoured to have you there to share in the celebration and bless the couple.",
 
+  storySectionTitle: "A Beautiful Beginning",
   story: [
     {
-      year: "2022",
-      title: "First Encounter",
-      text: "Two dedicated doctors, an unexpected conversation over warm cups of chai, and a connection that began to grow.",
+      year: "01",
+      title: "Brought together",
+      text: "Introduced through their families, Nikhil and Shraddha took the time to get to know each other and discover what mattered to them.",
       image: "./editable/assets/story-1.jpg",
     },
     {
-      year: "2024",
-      title: "Growing Together",
-      text: "Through demanding hospital schedules, quiet evenings, and shared laughter, discovering a partner and best friend for life.",
+      year: "02",
+      title: "Choosing each other",
+      text: "What began with an introduction grew into a decision they made together: to build a life side by side.",
       image: "./editable/assets/story-2.jpg",
     },
     {
-      year: "2026",
-      title: "Forever & Always",
-      text: "With hearts full of gratitude and love, choosing to embark upon this sacred journey of marriage together.",
+      year: "03",
+      title: "A lifetime ahead",
+      text: "Now comes the happiest part—celebrating their marriage with the people who have been part of their lives.",
       image: "./editable/assets/story-3.jpg",
     },
   ],
@@ -64,7 +75,7 @@ window.WEDDING_DATA = {
       address: "Krishna Nagar, Lucknow",
       dressCode: "Festive Glam / Formal",
       dressCodeColor: "#C9A84C",
-      note: "Join us for an auspicious evening of exchange of rings and celebration. 7:00 PM onwards.",
+      note: "An evening for rings, smiles, and the first celebration of Nikhil and Shraddha’s wedding.",
     },
     {
       key: "tilak",
@@ -75,7 +86,7 @@ window.WEDDING_DATA = {
       address: "Main Road, Kadru, Ranchi",
       dressCode: "Traditional Ethnic",
       dressCodeColor: "#B33939",
-      note: "An evening of traditional rituals and family blessings. 7:00 PM – 11:00 PM.",
+      note: "A cherished tradition, made more memorable by the presence of those dear to us.",
     },
     {
       key: "haldi-sangeet",
@@ -86,7 +97,7 @@ window.WEDDING_DATA = {
       address: "Hardag, Ranchi",
       dressCode: "Haldi Yellow & Sangeet Dazzle",
       dressCodeColor: "#E1A11A",
-      note: "Haldi ceremony followed by musical beats, dance performances & dinner. 2:00 PM onwards.",
+      note: "An afternoon of haldi, followed by music, dancing, and dinner. Come ready to celebrate!",
     },
     {
       key: "wedding",
@@ -97,7 +108,7 @@ window.WEDDING_DATA = {
       address: "Khunti Road, Hardag, Ranchi, Dundu, Jharkhand 835221",
       dressCode: "Royal Traditional Formals",
       dressCodeColor: "#7B1E2B",
-      note: "Swagatam, Varmala, Dinner followed by sacred Phere and auspicious rituals. 8:00 PM onwards.",
+      note: "We would be delighted to welcome you for the varmala and dinner, followed by the sacred pheras.",
     },
   ],
 
@@ -106,10 +117,12 @@ window.WEDDING_DATA = {
     address: "Khunti Road, Hardag, Ranchi, Dundu, Jharkhand 835221",
     lat: 23.2384,
     lng: 85.2952,
-    directionsNote: "Opposite Usha Martin University & near Sapphire International School, Khunti Road, Hardag. Valet parking available.",
+    directionsNote: "Opposite Usha Martin University and near Sapphire International School. Valet parking is available.",
     googleMapsUrl: "https://maps.app.goo.gl/KMFyMJwzCeWDEqsX6?g_st=iw",
   },
 
+  galleryTitle: "The celebrations ahead",
+  gallerySubtitle: "A glimpse of the colour, tradition, and joy awaiting us as we celebrate Nikhil and Shraddha.",
   gallery: [
     { src: "./editable/assets/gallery-1.jpg", alt: "Haldi and Mehndi celebration vibes" },
     { src: "./editable/assets/gallery-2.jpg", alt: "Sangeet music and dance celebrations" },
@@ -117,14 +130,21 @@ window.WEDDING_DATA = {
     { src: "./editable/assets/gallery-4.jpg", alt: "Auspicious wedding baraat procession" },
   ],
 
+  rsvp: {
+    title: "Will you be joining us?",
+    note: "We’re looking forward to celebrating together. Please let us know if you can attend.",
+    phone: "+919876543210",
+  },
+
   closing: {
-    blessing: "॥ श्री गणेशाय नमः ॥ With the blessings of our ancestors and elders, two families unite to bless Dr. Nikhil & Dr. Shraddha.",
-    signOff: "With warm regards & best compliments,",
+    title: "We hope to see you there",
+    blessing: "Your presence and blessings will make this occasion even more precious to the couple, and to us.",
+    signOff: "We await the pleasure of welcoming you,",
+    parents: "Mrs. Savita Shrivastava & Mr. Akhil Prasad Shrivastava",
   },
 
   contacts: [
-    { name: "Shrivastava Family (Groom)", phone: "+919876543210" },
-    { name: "Shrivastava Family (Bride)", phone: "+919812345678" },
+    { name: "Shrivastava Family", phone: "+919876543210" },
   ],
 
   media: {
@@ -136,5 +156,6 @@ window.WEDDING_DATA = {
     lantern: "./editable/assets/lantern.png",
     footerFloral: "./editable/assets/footer-floral.jpg",
     ambientAudio: "./editable/assets/ambient-shehnai.mp3",
+    ranjhaFluteAudio: "./editable/assets/ranjha-flute.mp3",
   },
 };
