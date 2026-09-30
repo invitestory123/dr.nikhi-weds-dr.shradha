@@ -155,7 +155,7 @@ window.WEDDING_DATA = {
     garland: "./editable/assets/garland.png",
     lantern: "./editable/assets/lantern.png",
     footerFloral: "./editable/assets/footer-floral.jpg",
-    ambientAudio: "./editable/assets/ambient-shehnai.mp3",
+    ambientAudio: "./editable/assets/ranjha-flute.mp3",
     ranjhaFluteAudio: "./editable/assets/ranjha-flute.mp3",
   },
 };
