@@ -43,6 +43,7 @@ window.WEDDING_DATA = {
 
   invitationNote: "As they begin this new chapter, we would be honoured to have you there to share in the celebration and bless the couple.",
 
+  storyKicker: "Their Journey",
   storySectionTitle: "A Beautiful Beginning",
   story: [
     {
