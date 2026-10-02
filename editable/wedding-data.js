@@ -134,7 +134,7 @@ window.WEDDING_DATA = {
   rsvp: {
     title: "Will you be joining us?",
     note: "We’re looking forward to celebrating together. Please let us know if you can attend.",
-    phone: "+919876543210",
+    phone: "+918051161126",
   },
 
   closing: {
@@ -145,7 +145,7 @@ window.WEDDING_DATA = {
   },
 
   contacts: [
-    { name: "Shrivastava Family", phone: "+919876543210" },
+    { name: "Shrivastava Family", phone: "+918051161126" },
   ],
 
   media: {
