@@ -11,15 +11,6 @@ window.WEDDING_DATA = {
     hashtag: "#NikhilWedsShraddha",
   },
 
-  opening: {
-    invocation: "॥ श्री गणेशाय नमः ॥",
-    message: "With the blessings of Lord Ganesha, we invite you to celebrate the wedding of our son Dr. Nikhil with Dr. Shraddha",
-    dateLabel: "Wednesday, 9 December 2026",
-    timeLabel: "8:00 PM onwards",
-    venueLabel: "Moments Resort, Hardag, Ranchi",
-    closingNote: "It would mean so much to have you with us.",
-  },
-
   mainEvent: {
     title: "Dr. Nikhil & Dr. Shraddha — Wedding Ceremony",
     startsAt: "2026-12-09T20:00:00+05:30",
