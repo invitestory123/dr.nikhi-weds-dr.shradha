@@ -140,6 +140,7 @@ window.WEDDING_DATA = {
   ],
 
   media: {
+    ogImage: "./og-image.png",
     ganesh: "./editable/assets/ganesh.png",
     doorPanel: "./editable/assets/door-panel.png",
     couple: "./editable/assets/couple.png",
