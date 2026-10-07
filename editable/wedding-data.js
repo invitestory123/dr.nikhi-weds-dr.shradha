@@ -110,7 +110,7 @@ window.WEDDING_DATA = {
     lat: 23.2384,
     lng: 85.2952,
     directionsNote: "Opposite Usha Martin University and near Sapphire International School. Valet parking is available.",
-    googleMapsUrl: "https://maps.app.goo.gl/KMFyMJwzCeWDEqsX6?g_st=iw",
+    googleMapsUrl: "https://maps.app.goo.gl/zqGfetuJK95cR5fV7?g_st=aw",
   },
 
   galleryTitle: "The celebrations ahead",
