@@ -53,6 +53,30 @@ Replace files directly in `editable/assets/` or update `media`:
 - Ambient music: `editable/assets/ambient-shehnai.mp3`
 - Story & gallery images: `story-1.jpg`, `story-2.jpg`, `gallery-1.jpg`, etc.
 
+### Social Preview (Open Graph)
+`index.html` carries the share metadata for the production link
+`https://dr-nikhil-weds-dr-shradha.inviteby.top/`:
+
+- `og:title`, `og:description`, `og:url`, `og:image`, `og:logo` (+ matching `twitter:*` tags)
+- `og:image` → `og-image.jpg` (1200×630), `og:logo` → `og-logo.png` (512×512)
+
+The two artwork sources live next to them so the card can be regenerated after a
+copy change — edit the text, then re-render:
+
+```
+og-card.html   → og-image.jpg / og-image.png   (1200 × 630)
+og-seal.html   → og-logo.png                   (512 × 512)
+```
+
+```
+python -m http.server 8099
+chrome --headless=new --window-size=1200,630 --screenshot=og-image.jpg http://127.0.0.1:8099/og-card.html
+chrome --headless=new --window-size=512,512  --screenshot=og-logo.png  http://127.0.0.1:8099/og-seal.html
+```
+
+If the production domain changes, update `og:url`, `og:image`, `og:logo`,
+`twitter:url`, `twitter:image` and `rel="canonical"` together.
+
 ---
 
 ## Rules for Future Agents
@@ -61,3 +85,5 @@ Replace files directly in `editable/assets/` or update `media`:
 2. Do not modify bundled code in `assets/` unless requested.
 3. Keep ISO date strings with proper timezone offsets (e.g. `+05:30`).
 4. Validate changes with `node --check editable/wedding-data.js`.
+5. Presentation tweaks that the build would drop (type size, weight, tracking) go in the
+   inline `<style>` block in `index.html`, not in the hashed CSS bundle.

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>OG — Dr. Nikhil &amp; Dr. Shraddha</title>
+    <style>
+      @font-face {
+        font-family: Marcellus;
+        src: url(./assets/marcellus-latin-400-normal-86dSXJnk.woff2) format("woff2");
+        font-weight: 400;
+        font-display: block;
+      }
+      @font-face {
+        font-family: Cormorant Garamond;
+        src: url(./assets/cormorant-garamond-latin-500-normal-BsRWmXhO.woff2) format("woff2");
+        font-weight: 500;
+        font-display: block;
+      }
+      @font-face {
+        font-family: Cormorant Garamond;
+        src: url(./assets/cormorant-garamond-latin-600-italic-DCuhXWyK.woff2) format("woff2");
+        font-weight: 600;
+        font-style: italic;
+        font-display: block;
+      }
+      @font-face {
+        font-family: Karla;
+        src: url(./assets/karla-latin-wght-normal-C3-ma4ov.woff2) format("woff2-variations");
+        font-weight: 200 800;
+        font-display: block;
+      }
+
+      :root {
+        --paper: #faf3e6;
+        --paper-deep: #f3e7d4;
+        --maroon: #7a1d2a;
+        --maroon-deep: #64121f;
+        --gold: #c9a84c;
+        --gold-soft: #d9c07f;
+        --ink: #4a3a2e;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+      }
+
+      .card {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        background:
+          radial-gradient(120% 90% at 12% 0%, #fffaf1 0%, rgba(255, 250, 241, 0) 58%),
+          radial-gradient(100% 80% at 100% 100%, #f6ead6 0%, rgba(246, 234, 214, 0) 60%),
+          var(--paper);
+        display: flex;
+        overflow: hidden;
+      }
+
+      /* faint woven texture, keeps it from looking flat */
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background-image:
+          repeating-linear-gradient(45deg, rgba(201, 168, 76, 0.035) 0 1px, transparent 1px 14px),
+          repeating-linear-gradient(-45deg, rgba(122, 29, 42, 0.022) 0 1px, transparent 1px 14px);
+        pointer-events: none;
+      }
+
+      /* --- frame ------------------------------------------------------ */
+      .frame {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      /* --- left column ------------------------------------------------ */
+      .left {
+        position: relative;
+        width: 760px;
+        padding: 62px 56px 54px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        z-index: 2;
+      }
+
+      .kicker {
+        font-family: Karla, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.46em;
+        text-indent: 0.46em;
+        text-transform: uppercase;
+        color: var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+      .kicker i {
+        display: block;
+        width: 46px;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(201, 168, 76, 0), rgba(201, 168, 76, 0.9));
+      }
+      .kicker i:last-child { transform: scaleX(-1); }
+
+      .names {
+        font-family: Marcellus, serif;
+        color: var(--maroon);
+        margin-top: 26px;
+        line-height: 1;
+      }
+      .names .n {
+        display: block;
+        font-size: 84px;
+        letter-spacing: 0.005em;
+      }
+      .names .amp {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 54px;
+        color: var(--gold);
+        line-height: 0.9;
+        margin: 8px 0 6px;
+      }
+
+      .rule {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        margin: 34px 0 26px;
+      }
+      .rule span {
+        height: 1px;
+        width: 150px;
+        background: linear-gradient(90deg, rgba(201, 168, 76, 0), rgba(201, 168, 76, 0.95));
+      }
+      .rule span:last-child { transform: scaleX(-1); }
+      .rule b {
+        width: 9px;
+        height: 9px;
+        background: var(--gold);
+        transform: rotate(45deg);
+        display: block;
+      }
+
+      .date {
+        font-family: Karla, sans-serif;
+        font-size: 27px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--maroon);
+      }
+      .venue {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-top: 12px;
+        letter-spacing: 0.02em;
+      }
+
+      .foot {
+        margin-top: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+      }
+      .foot .pill {
+        font-family: Karla, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        color: var(--maroon);
+        border: 1px solid rgba(201, 168, 76, 0.85);
+        border-radius: 999px;
+        padding: 11px 26px;
+        background: rgba(255, 255, 255, 0.5);
+      }
+      .foot .season {
+        font-family: Karla, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        color: rgba(122, 29, 42, 0.62);
+        text-transform: uppercase;
+      }
+
+      /* --- right arch panel ------------------------------------------- */
+      .right {
+        position: relative;
+        width: 440px;
+        background:
+          radial-gradient(90% 70% at 50% 18%, #8a2532 0%, rgba(138, 37, 50, 0) 62%),
+          linear-gradient(180deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+      }
+      .right::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(201, 168, 76, 0), rgba(201, 168, 76, 0.9) 30%, rgba(201, 168, 76, 0.9) 70%, rgba(201, 168, 76, 0));
+      }
+
+      .arch { position: relative; width: 300px; height: 470px; }
+
+      .seal {
+        position: absolute;
+        left: 50%;
+        top: 58%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: var(--gold-soft);
+      }
+      .seal .mono {
+        font-family: Marcellus, serif;
+        font-size: 58px;
+        letter-spacing: 0.04em;
+        line-height: 0.86;
+        color: #efdca8;
+      }
+      .seal .mono em {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-size: 36px;
+        color: var(--gold);
+        display: block;
+        margin: 4px 0;
+      }
+      .seal .est {
+        margin-top: 26px;
+        font-family: Karla, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.34em;
+        text-indent: 0.34em;
+        text-transform: uppercase;
+        color: rgba(239, 220, 168, 0.72);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <svg class="frame" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+        <rect x="22" y="22" width="1156" height="586" stroke="#c9a84c" stroke-opacity="0.75" stroke-width="2" />
+        <rect x="33" y="33" width="1134" height="564" stroke="#c9a84c" stroke-opacity="0.4" stroke-width="1" />
+        <!-- corner diamonds -->
+        <g fill="#c9a84c">
+          <rect x="16" y="16" width="12" height="12" transform="rotate(45 22 22)" fill-opacity="0.95" />
+          <rect x="1172" y="16" width="12" height="12" transform="rotate(45 1178 22)" fill-opacity="0.95" />
+          <rect x="16" y="602" width="12" height="12" transform="rotate(45 22 608)" fill-opacity="0.95" />
+          <rect x="1172" y="602" width="12" height="12" transform="rotate(45 1178 608)" fill-opacity="0.95" />
+        </g>
+      </svg>
+
+      <div class="left">
+        <div class="kicker"><i></i>Wedding Invitation<i></i></div>
+
+        <div class="names">
+          <span class="n">Dr. Nikhil</span>
+          <span class="amp">&amp;</span>
+          <span class="n">Dr. Shraddha</span>
+        </div>
+
+        <div class="rule"><span></span><b></b><span></span></div>
+
+        <div class="date">Wednesday &middot; 9 December 2026</div>
+        <div class="venue">Moments Resort &middot; Hardag, Ranchi</div>
+
+        <div class="foot">
+          <span class="season">Save the date</span>
+          <span class="pill">#NikhilWedsShraddha</span>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="arch">
+          <svg width="300" height="470" viewBox="0 0 300 470" fill="none">
+            <!-- outer jharok arch -->
+            <path
+              d="M14 470V196C14 118 74 52 150 8c76 44 136 110 136 188v274"
+              stroke="#d9c07f" stroke-opacity="0.9" stroke-width="2.5" />
+            <path
+              d="M30 470V200c0-70 54-130 120-170 66 40 120 100 120 170v270"
+              stroke="#d9c07f" stroke-opacity="0.45" stroke-width="1.2" />
+            <!-- lotus crest -->
+            <g stroke="#d9c07f" stroke-opacity="0.75" stroke-width="1.4" fill="none" transform="translate(150 76)">
+              <circle r="7" fill="#d9c07f" fill-opacity="0.6" stroke="none" />
+              <path d="M0-9c14-16 34-16 44 0-14 12-30 12-44 0z" />
+              <path d="M0-9c-14-16-34-16-44 0 14 12 30 12 44 0z" />
+              <path d="M-7 4c-22 6-34 26-28 46 20 0 34-16 35-46z" />
+              <path d="M7 4c22 6 34 26 28 46-20 0-34-16-35-46z" />
+              <path d="M0 14c-8 18-8 40 0 58 8-18 8-40 0-58z" />
+            </g>
+          </svg>
+
+          <div class="seal">
+            <div class="mono">N<em>&amp;</em>S</div>
+            <div class="est">Ranchi &middot; 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Logo — Dr. Nikhil &amp; Dr. Shraddha</title>
+    <style>
+      @font-face {
+        font-family: Marcellus;
+        src: url(./assets/marcellus-latin-400-normal-86dSXJnk.woff2) format("woff2");
+        font-weight: 400;
+        font-display: block;
+      }
+      @font-face {
+        font-family: Cormorant Garamond;
+        src: url(./assets/cormorant-garamond-latin-600-italic-DCuhXWyK.woff2) format("woff2");
+        font-weight: 600;
+        font-style: italic;
+        font-display: block;
+      }
+      @font-face {
+        font-family: Karla;
+        src: url(./assets/karla-latin-wght-normal-C3-ma4ov.woff2) format("woff2-variations");
+        font-weight: 200 800;
+        font-display: block;
+      }
+
+      :root {
+        --maroon: #7a1d2a;
+        --maroon-deep: #5f111d;
+        --gold: #c9a84c;
+        --gold-soft: #efdca8;
+      }
+
+      html, body { margin: 0; width: 512px; height: 512px; overflow: hidden; }
+
+      .seal {
+        position: relative;
+        width: 512px;
+        height: 512px;
+        background:
+          radial-gradient(85% 65% at 50% 22%, #8b2533 0%, rgba(139, 37, 51, 0) 65%),
+          linear-gradient(180deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 60px;
+        overflow: hidden;
+      }
+
+      .seal::before {
+        content: "";
+        position: absolute;
+        inset: 24px;
+        border: 2px solid rgba(201, 168, 76, 0.85);
+        border-radius: 50%;
+      }
+      .seal::after {
+        content: "";
+        position: absolute;
+        inset: 30px;
+        border: 1px solid rgba(201, 168, 76, 0.45);
+        border-radius: 50%;
+      }
+
+      .lotus { margin-top: 24px; }
+
+      .mono {
+        font-family: Marcellus, serif;
+        font-size: 96px;
+        line-height: 0.84;
+        color: var(--gold-soft);
+        text-align: center;
+        letter-spacing: 0.02em;
+        margin-top: 12px;
+      }
+      .mono em {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-size: 52px;
+        color: var(--gold);
+        margin: 5px 0;
+      }
+
+      .rule {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .rule span {
+        width: 44px;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(201, 168, 76, 0), rgba(201, 168, 76, 0.9));
+      }
+      .rule span:last-child { transform: scaleX(-1); }
+      .rule b {
+        width: 8px;
+        height: 8px;
+        background: var(--gold);
+        transform: rotate(45deg);
+      }
+
+      .cap {
+        margin-top: 12px;
+        font-family: Karla, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-indent: 0.2em;
+        text-transform: uppercase;
+        color: rgba(239, 220, 168, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="seal">
+      <svg class="lotus" width="86" height="70" viewBox="0 0 86 70" fill="none">
+        <g stroke="#d9c07f" stroke-opacity="0.85" stroke-width="1.6" fill="none">
+          <circle cx="43" cy="26" r="5.5" fill="#d9c07f" fill-opacity="0.65" stroke="none" />
+          <path d="M43 18c11-13 27-13 35 0-11 10-24 10-35 0z" />
+          <path d="M43 18c-11-13-27-13-35 0 11 10 24 10 35 0z" />
+          <path d="M38 30c-17 5-26 20-21 35 15 0 26-12 27-35z" />
+          <path d="M48 30c17 5 26 20 21 35-15 0-26-12-27-35z" />
+          <path d="M43 34c-6 14-6 24 0 28 6-4 6-14 0-28z" />
+        </g>
+      </svg>
+
+      <div class="mono">N<em>&amp;</em>S</div>
+
+      <div class="rule"><span></span><b></b><span></span></div>
+      <div class="cap">Nikhil weds Shraddha</div>
+    </div>
+  </body>
+</html>
