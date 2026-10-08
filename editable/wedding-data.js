@@ -107,8 +107,8 @@ window.WEDDING_DATA = {
   venue: {
     name: "Moments Resort",
     address: "Khunti Road, Hardag, Ranchi, Dundu, Jharkhand 835221",
-    lat: 23.2384,
-    lng: 85.2952,
+    lat: 23.2342,
+    lng: 85.2961,
     directionsNote: "Opposite Usha Martin University and near Sapphire International School. Valet parking is available.",
     googleMapsUrl: "https://maps.app.goo.gl/zqGfetuJK95cR5fV7?g_st=aw",
   },
